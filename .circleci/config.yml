@@ -15,5 +15,5 @@ jobs:
        - run: aws lambda list-functions
        - run: ls -a
        - run: zip index.zip index.py
-       - run: la -a
+       - run: ls -a
        - run: printenv
