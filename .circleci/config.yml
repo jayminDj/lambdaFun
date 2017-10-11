@@ -5,4 +5,4 @@ jobs:
        - image: circleci/python:3.6.1
      steps:
        - checkout
-       - run: ls ~/ -a
+       - run: ls ~/.aws -a
