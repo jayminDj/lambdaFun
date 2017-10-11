@@ -14,4 +14,6 @@ jobs:
        - run: aws configure set output json
        - run: aws lambda list-functions
        - run: ls -a
-       - run: zip
+       - run: zip index.zip index.py
+       - run: la -a
+       - run: printenv
