@@ -12,4 +12,4 @@ jobs:
        - run: aws configure set jaymin.aws_secret_access_key $AWS_SECRET_ACCESS_KEY
        - run: aws configure set jaymin.region us-east-1
        - run: aws configure set jaymin.output json
-       - run: cat ~/.aws/credentials
+       - run: aws lambda list-functions
