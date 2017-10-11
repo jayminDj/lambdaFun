@@ -8,4 +8,4 @@ jobs:
      steps:
        - checkout
        - run: pip install awscli --upgrade --user
-       - run: whereis aws
+       - run: aws --version
