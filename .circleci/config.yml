@@ -7,4 +7,5 @@ jobs:
         - master
      steps:
        - checkout
-       - run: python3 --version
+       - run: pip install awscli --upgrade --user
+       - run: ls ~/.local/Python -a
