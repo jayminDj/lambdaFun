@@ -5,4 +5,6 @@ jobs:
        - image: circleci/python:3.6.1
      steps:
        - checkout
-       - run: sudo ls ~/.aws -a
+       - run: printenv
+     environment:
+       AWS_APP_ID: $AWS_APP_ID
