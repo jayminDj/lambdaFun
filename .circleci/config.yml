@@ -1,10 +1,11 @@
 version: 2
 jobs:
    build:
-     docker:
-       - image: circleci/python:3.6.1
+     machine: true
+     branches:
+      only:
+        - master
      steps:
        - checkout
-       - run: printenv
-     environment:
-       AWS_APP_ID: $AWS_APP_ID
+       - run: python --version
+       - run: python --version
