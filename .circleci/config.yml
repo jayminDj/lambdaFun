@@ -1,9 +1,10 @@
 version: 2
 jobs:
    build:
-     machine:
-       - image: circleci/classic:latest
+     machine: true
+     branches:
+      only:
+        - master
      steps:
        - checkout
-       - run: pip install awscli --upgrade --user
-       - run: ls -a
+       - run: ls ~/ -a
