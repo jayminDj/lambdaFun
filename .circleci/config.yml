@@ -1,8 +1,8 @@
 version: 2
 jobs:
    build:
-     docker:
-       - image: circleci/python:3.6.1
+     machine:
+       - image: circleci/classic:latest
      steps:
        - checkout
        - run: pip install awscli --upgrade --user
