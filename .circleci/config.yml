@@ -17,3 +17,12 @@ jobs:
        - run: zip index.zip index.py
        - run: ls -a
        - run: printenv
+       - run: |
+          aws lambda create-function \
+          --region us-east-1 --function-name circleci \
+          --role arn:aws:iam::$AWS_ACCOUNT_ID:role/lambda_basic_execution \
+          --handler index.my_handler \
+          --runtime python3.6 \
+          --timeout 15 \
+          --zip-file fileb://index.zip \
+          --memory-size 512
