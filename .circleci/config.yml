@@ -8,4 +8,4 @@ jobs:
      steps:
        - checkout
        - run: python --version
-       - run: python --version
+       - run: python3 --version
